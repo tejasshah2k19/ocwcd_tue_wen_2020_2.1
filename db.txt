@@ -1,0 +1,30 @@
+mysql terminal 
+
+
+mysql > 
+
+
+create database ocwcd; 
+
+use ocwcd; 
+
+create table user (
+	userId integer primary key auto_increment,
+	firstName varchar(20),
+	email varchar(30),
+	password varchar(20)
+);
+
+
+create table category(
+	categoryId integer primary key auto_increment,
+	categoryName varchar(40)
+);
+
+
+create table product(
+	productId integer primary key auto_increment,
+	productName varchar(40),
+	categoryId integer
+);
+

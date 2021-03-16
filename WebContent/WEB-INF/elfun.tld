@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<taglib>
+
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+
+
+	<function>
+		<name>greetings</name>
+		<function-class>com.elfunction.MyElFunction</function-class>
+		<function-signature>java.lang.String greet()</function-signature>
+	</function>
+
+
+	<function>
+		<name>convertUpper</name>
+		<function-class>com.elfunction.EmployeeELFunction</function-class>
+		<function-signature>java.lang.String upper(java.lang.String) </function-signature>
+	</function>
+
+
+</taglib>
