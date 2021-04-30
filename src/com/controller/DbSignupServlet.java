@@ -21,11 +21,13 @@ public class DbSignupServlet extends HttpServlet {
 		String firstName = request.getParameter("firstName");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
+		float salary = Float.parseFloat(request.getParameter("salary"));
 
 		UserBean userBean = new UserBean();
 		userBean.setEmail(email);
 		userBean.setPassword(password);
 		userBean.setFirstName(firstName);
+		userBean.setSalary(salary);
 
 		UserDao userDao = new UserDao();
 		userDao.insertUser(userBean);

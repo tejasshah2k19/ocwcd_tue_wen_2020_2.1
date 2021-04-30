@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <%
-	if (session == null || session.getAttribute("isLogin") == null) {
+	 if (session == null || session.getAttribute("isLogin") == null) {
 		System.out.print(request.getRequestURL());
 		request.setAttribute("pastUrl", request.getRequestURL());
 		request.setAttribute("msg", "Please Login");
 		request.getRequestDispatcher("Login.jsp").forward(request, response);
-	}
+	} 
 %>
 <style>
 .header {

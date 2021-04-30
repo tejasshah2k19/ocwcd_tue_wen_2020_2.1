@@ -12,7 +12,8 @@
 
 		FirstName: <input type="text" name="firstName" /> ${firstNameError }<br>
 		Email : <input type="text" name="email" />${emailError } <br>
-		Password : <input type="password" name="password" />${passwordError }
+		Password : <input type="password" name="password" />${passwordError }<br>
+		Salary : <input type="text" name="salary" /><Br>
 		<br> <input type="submit" value="Signup" />
 
 	</form>

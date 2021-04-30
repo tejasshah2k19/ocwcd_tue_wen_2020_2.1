@@ -1,0 +1,15 @@
+JSTL  - java standard tag library 
+
+
+core*
+ 
+sql
+function
+xml
+Internationalization
+---------------------------------------------------------------
+if choose catch forEach set out remove url 
+
+1) download jstl.jar
+2) jsp use - <%@ taglib %>  
+ 

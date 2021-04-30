@@ -19,12 +19,12 @@ public class UserDao {
 
 			// to execute any query in db we need prepared stmt.
 			PreparedStatement pstmt = c
-					.prepareStatement("insert into user (firstName,email,password,roleId) values (?,?,?,?)");
+					.prepareStatement("insert into user (firstName,email,password,roleId,salary) values (?,?,?,?,?)");
 			pstmt.setString(2, userBean.getEmail());
 			pstmt.setString(3, userBean.getPassword());
 			pstmt.setString(1, userBean.getFirstName());
 			pstmt.setInt(4, userBean.getRoleId());// 0
-
+			pstmt.setFloat(5, userBean.getSalary());
 			// db - query -run/execute // insert update delete
 			pstmt.executeUpdate();// state change
 
@@ -53,7 +53,7 @@ public class UserDao {
 				userBean.setEmail(rs.getString("email"));
 				userBean.setPassword(rs.getString("password"));
 				userBean.setUserId(rs.getInt("userId"));
-
+				userBean.setSalary(rs.getFloat("salary"));
 				users.add(userBean);
 			}
 

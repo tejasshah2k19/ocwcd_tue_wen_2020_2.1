@@ -7,7 +7,16 @@ public class UserBean {
 	private String email;
 	private String password;
 	int roleId;
-	
+	float salary;
+
+	public float getSalary() {
+		return salary;
+	}
+
+	public void setSalary(float salary) {
+		this.salary = salary;
+	}
+
 	public int getRoleId() {
 		return roleId;
 	}

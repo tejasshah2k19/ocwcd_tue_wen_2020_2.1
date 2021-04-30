@@ -1,0 +1,51 @@
+custom tag :- 
+
+<b> 
+<i>
+<mark>
+<table> 
+
+			custom tag 
+simple tag 				classic tag 
+
+<sql db="campus" table="student" /> 
+
+<greet></greet>
+1) jsp-api.jar [ tomcat/lib ]
+2) tag handler class [ extends SimpleTagSupport ] [ doTag() ]  
+3) .tld  [ tag entry ] 
+4) web.xml [ map tld ]  [ always inside jsp-config and it is only 1 time created ] 
+5) jsp use : import using <%@taglib %> 
+
+
+
+JSP --> <k:greet/> --> uri [ stag ] --> web.xml --> taglib location --> tag [ name ]  ==>class -> doTag 
+
+-----------------------------------------------------
+classic tag:- 
+	Tag --  nobody content,no attribute 
+	 	no body content with attribute  
+		body content[print],attribute 
+	
+	IterationTag
+		body content multipletime print 
+		<print count="5">Royal</print> 
+		Royal
+		Royal
+		Royal
+		Royal
+		Royal
+		
+			1) doAfterBody 
+			2) EVAL_BODY_AGAIN 
+		 
+	BodyTag
+		body content modify and print
+		<upper>hey i am rohin</upper>
+		HEY I AM ROHIN
+	BodyTag -> child -> IterationTag -> child -> Tag 
+		1) BodyContent bodyContent - getter setter
+		2) initBody() setBodyContent() 
+		3) EVAL_BODY_BUFFERED  [ modify ] 
+
+

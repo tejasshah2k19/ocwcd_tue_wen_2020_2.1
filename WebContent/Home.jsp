@@ -10,12 +10,14 @@
 
 
 
-	<jsp:include page="Header.jsp"></jsp:include>
+	<%-- 	<jsp:include page="Header.jsp"></jsp:include>
+ --%>
 
-
+	<%@include file="Header.jsp"%>
+	<%=g%>
 	<%
 		//=g
-		int a=90;
+		int a = 90;
 	%>
 	<h2>Welcome......${sessionScope.email }</h2>
 
